@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipe</h1>
+
+<%= turbo_stream_from "recipes" %>
+
+<%= turbo_frame_tag "recipe_form" do %>
+  <%= render "recipes/form", recipe: @recipe %>
+<% end %>
+
+<%= turbo_frame_tag "recipes" do %>
+  <%= render @recipes %>
+<% end %>

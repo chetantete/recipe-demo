@@ -1,0 +1,11 @@
+<%= turbo_frame_tag dom_id(recipe) do %>
+  <div class="card card-body">
+    <div><%= recipe.problem %></div>
+    <div><%= recipe.solution %></div>
+    <div><%= recipe.discussion %></div>
+
+    <div class="mt-2">
+      <%= link_to "Edit", edit_recipe_path(recipe) %>
+    </div>
+  </div>
+<% end %>

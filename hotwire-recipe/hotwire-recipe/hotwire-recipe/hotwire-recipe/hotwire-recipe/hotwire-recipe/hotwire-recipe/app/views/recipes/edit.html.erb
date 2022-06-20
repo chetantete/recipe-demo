@@ -1,0 +1,8 @@
+<h1>Editing Recipe</h1>
+
+<%= turbo_frame_tag dom_id(@recipe) do %>
+  <div class="card card-body">
+    <%= render 'form', recipe: @recipe %>
+    <%= link_to "Cancel", @recipe %>
+  </div>
+<% end %>
