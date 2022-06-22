@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_start_time
 
   # GET /recipes
   # GET /recipes.json
@@ -73,4 +74,8 @@ class RecipesController < ApplicationController
     def recipe_params
       params.require(:recipe).permit(:problem, :solution, :discussion,:banner,:title, :introduction )
     end
+
+   def set_start_time
+    @start_time = Time.now.to_f
+   end
 end

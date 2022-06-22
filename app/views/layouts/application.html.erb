@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <div class="float-right"> Page Rendered in <%= sprintf('%.3f', (Time.now.to_f - @start_time) ) %> seconds </div>
     <%= yield %>
   </body>
 </html>
